@@ -1,4 +1,4 @@
 FingerSmash
 Contributers:
-Jason Lieu    (jasontlieu@gmail.com)
+Jason Lieu    (jasontulieu@gmail.com)
 Brandon Lee   (nbrandonlee@gmail.com)
