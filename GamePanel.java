@@ -47,7 +47,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback{
 
 
 
-    private int swingSpeed = 7;                //CHANGE SWING TIME HERE
+    private int swingSpeed = 8;                //CHANGE SWING TIME HERE
                                                 //ALSO NEEDS TO CHANGE IN SWITCH/CASE in draw
 
     public GamePanel(Context context){
@@ -188,11 +188,14 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback{
         canvas.drawColor(Color.WHITE);
         drawable.draw(canvas);
         switch(swingTimer){
-            case 7:
+            case 8:
                 hammerAnimation_0.draw(canvas);
                 break;
-            case 6:
+            case 7:
                 hammerAnimation_1.draw(canvas);
+                break;
+            case 6:
+                hammerAnimation_2.draw(canvas);
                 break;
             case 5:
                 hammerAnimation_2.draw(canvas);
@@ -217,11 +220,12 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback{
         canvas.drawText("RESET",(int)(width * 0.83),(int)(height * 0.95), resetText);
         //canvas.drawText("smash: " + smashTimer,(int)(width*0.15),(height/2)+ 100, text);                    //temp
         //canvas.drawText("swing: " + swingTimer,(int)(width*0.15),(height/2)+ 300, text);                    //temp
+
         if(win){
-            canvas.drawText("win",(width/2) - 80,(int)(height * 0.2), text);
+            canvas.drawText("WIN",(int)(width * 0.5) - 80,(int)(height * 0.2), text);
         }
         if(lose){
-            canvas.drawText("lose",(width/2) - 80,(int)(height * 0.2), text);
+            canvas.drawText("LOSE",(int)(width * 0.49) - 80,(int)(height * 0.2), text);
         }
         if(tooSoon){
             canvas.drawText("too soon",(width/2) - 80,(int)(height * 0.2), text);
